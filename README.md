@@ -19,10 +19,12 @@ Programa skirta darbui su `std::string` ir asociatyviais konteineriais. Ji nuska
 ## Failai
 
 - `EgzaminoUzd.cpp` - pagrindinis programos kodas.
+- `CMakeLists.txt` - CMake konfiguracija.
 - `tekstas.txt` - tekstas is https://lt.wikipedia.org/wiki/Vilnius, kuriame yra daugiau nei 1000 zodziu ir keli URL adresai.
 - `zodziu_pasikartojimai.txt` - sugeneruotas zodziu pasikartojimu failas.
 - `cross_reference.txt` - sugeneruota cross-reference lentele.
 - `url_adresai.txt` - sugeneruotas URL adresu sarasas.
+- `RELEASE_NOTES.md` - pastabos GitHub release kurimui.
 
 ## Paleidimas
 
