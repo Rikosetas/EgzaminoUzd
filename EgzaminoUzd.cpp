@@ -1,8 +1,11 @@
 #include <algorithm>
 #include <cctype>
+#include <codecvt>
+#include <cwctype>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <locale>
 #include <map>
 #include <set>
 #include <sstream>
@@ -11,149 +14,160 @@
 
 using namespace std;
 
-string mazosiomisRaides(string zodis)
+string mazosiomisRaides( string zodis )
 {
-    for (char& raide : zodis)
+    for ( char& raide : zodis )
     {
-        raide = static_cast<char>(tolower(static_cast<unsigned char>(raide)));
+        raide = static_cast< char >( tolower( static_cast< unsigned char >( raide ) ) );
     }
 
     return zodis;
 }
 
-bool arLeistinasUrlSimbolis(char simbolis)
+bool arLeistinasUrlSimbolis( char simbolis )
 {
     string leistini = ".:/?#[]@!$&'()*+,;=%-_~";
-    return isalnum(static_cast<unsigned char>(simbolis)) || leistini.find(simbolis) != string::npos;
+    return isalnum( static_cast< unsigned char >( simbolis ) ) || leistini.find( simbolis ) != string::npos;
 }
 
-string nuvalytiUrl(string tekstas)
+string nuvalytiUrl( string tekstas )
 {
-    while (!tekstas.empty() && !arLeistinasUrlSimbolis(tekstas.front()))
+    while ( !tekstas.empty( ) && !arLeistinasUrlSimbolis( tekstas.front( ) ) )
     {
-        tekstas.erase(tekstas.begin());
+        tekstas.erase( tekstas.begin( ) );
     }
 
-    while (!tekstas.empty() && !isalnum(static_cast<unsigned char>(tekstas.back())) && tekstas.back() != '/')
+    while ( !tekstas.empty( ) && !isalnum( static_cast< unsigned char >( tekstas.back( ) ) ) && tekstas.back( ) != '/' )
     {
-        tekstas.pop_back();
+        tekstas.pop_back( );
     }
 
     return tekstas;
 }
 
-bool arUrl(string tekstas)
+bool arUrl( string tekstas )
 {
-    tekstas = mazosiomisRaides(nuvalytiUrl(tekstas));
+    tekstas = mazosiomisRaides( nuvalytiUrl( tekstas ) );
 
-    if (tekstas.find("http://") == 0 || tekstas.find("https://") == 0 || tekstas.find("www.") == 0)
+    if ( tekstas.find( "http://" ) == 0 || tekstas.find( "https://" ) == 0 || tekstas.find( "www." ) == 0 )
     {
-        return tekstas.find('.') != string::npos;
+        return tekstas.find( '.' ) != string::npos;
     }
 
-    if (tekstas.find('@') != string::npos || tekstas.find('.') == string::npos)
+    if ( tekstas.find( '@' ) != string::npos || tekstas.find( '.' ) == string::npos )
     {
         return false;
     }
 
-    size_t paskutinisTaskas = tekstas.rfind('.');
-    string galune = tekstas.substr(paskutinisTaskas + 1);
+    size_t paskutinisTaskas = tekstas.rfind( '.' );
+    string galune = tekstas.substr( paskutinisTaskas + 1 );
     set<string> galimosGalunes = { "lt", "com", "org", "net", "edu", "gov", "io", "dev", "eu", "info" };
 
-    if (galune.length() < 2 || galune.length() > 6)
+    if ( galune.length( ) < 2 || galune.length( ) > 6 )
     {
         return false;
     }
 
-    for (char simbolis : galune)
+    for ( char simbolis : galune )
     {
-        if (!isalpha(static_cast<unsigned char>(simbolis)))
+        if ( !isalpha( static_cast< unsigned char >( simbolis ) ) )
         {
             return false;
         }
     }
 
-    return galimosGalunes.find(galune) != galimosGalunes.end();
+    return galimosGalunes.find( galune ) != galimosGalunes.end( );
 }
 
-string gautiZodi(string tekstas)
+string gautiZodi( string tekstas )
 {
-    string zodis;
+    wstring_convert<codecvt_utf8<wchar_t>> keitiklis;
+    wstring platusTekstas;
+    wstring platusZodis;
 
-    for (char simbolis : tekstas)
+    try
     {
-        if (isalnum(static_cast<unsigned char>(simbolis)))
+        platusTekstas = keitiklis.from_bytes( tekstas );
+    }
+    catch ( ... )
+    {
+        platusTekstas = wstring( tekstas.begin( ), tekstas.end( ) );
+    }
+
+    for ( wchar_t simbolis : platusTekstas )
+    {
+        if ( iswalnum( simbolis ) )
         {
-            zodis += static_cast<char>(tolower(static_cast<unsigned char>(simbolis)));
+            platusZodis += static_cast< wchar_t >( towlower( simbolis ) );
         }
     }
 
-    return zodis;
+    return keitiklis.to_bytes( platusZodis );
 }
 
-void nuskaitytiTeksta(const string& failoVardas, map<string, int>& zodziuKiekiai,
-    map<string, set<int>>& eilutes, vector<string>& urlAdresai)
+void nuskaitytiTeksta( const string& failoName, map<string, int>& zodziuKiekiai,
+    map<string, set<int>>& eilutes, vector<string>& urlAdresai )
 {
-    ifstream failas(failoVardas);
+    ifstream failas( failoName );
     string eilute;
     int eilutesNumeris = 0;
 
-    while (getline(failas, eilute))
+    while ( getline( failas, eilute ) )
     {
         eilutesNumeris++;
-        stringstream srautas(eilute);
+        stringstream srautas( eilute );
         string dalis;
 
-        while (srautas >> dalis)
+        while ( srautas >> dalis )
         {
-            if (arUrl(dalis))
+            if ( arUrl( dalis ) )
             {
-                urlAdresai.push_back(nuvalytiUrl(dalis));
+                urlAdresai.push_back( nuvalytiUrl( dalis ) );
                 continue;
             }
 
-            string zodis = gautiZodi(dalis);
+            string zodis = gautiZodi( dalis );
 
-            if (!zodis.empty())
+            if ( !zodis.empty( ) )
             {
-                zodziuKiekiai[zodis]++;
-                eilutes[zodis].insert(eilutesNumeris);
+                zodziuKiekiai [ zodis ]++;
+                eilutes [ zodis ].insert( eilutesNumeris );
             }
         }
     }
 }
 
-void isvestiZodziuKiekius(const string& failoVardas, const map<string, int>& zodziuKiekiai)
+void isvestiZodziuKiekius( const string& failoName, const map<string, int>& zodziuKiekiai )
 {
-    ofstream rezultatai(failoVardas);
+    ofstream rezultatai( failoName );
 
-    rezultatai << left << setw(20) << "Zodis" << "Kiekis" << endl;
+    rezultatai << left << setw( 20 ) << "Zodis" << "Kiekis" << endl;
     rezultatai << "------------------------------" << endl;
 
-    for (const auto& pora : zodziuKiekiai)
+    for ( const auto& pora : zodziuKiekiai )
     {
-        if (pora.second > 1)
+        if ( pora.second > 1 )
         {
-            rezultatai << left << setw(20) << pora.first << pora.second << endl;
+            rezultatai << left << setw( 20 ) << pora.first << pora.second << endl;
         }
     }
 }
 
-void isvestiCrossReference(const string& failoVardas, const map<string, int>& zodziuKiekiai,
-    const map<string, set<int>>& eilutes)
+void isvestiCrossReference( const string& failoName, const map<string, int>& zodziuKiekiai,
+    const map<string, set<int>>& eilutes )
 {
-    ofstream rezultatai(failoVardas);
+    ofstream rezultatai( failoName );
 
-    rezultatai << left << setw(20) << "Zodis" << "Eilutes" << endl;
+    rezultatai << left << setw( 20 ) << "Zodis" << "Eilutes" << endl;
     rezultatai << "------------------------------------------------------------" << endl;
 
-    for (const auto& pora : zodziuKiekiai)
+    for ( const auto& pora : zodziuKiekiai )
     {
-        if (pora.second > 1)
+        if ( pora.second > 1 )
         {
-            rezultatai << left << setw(20) << pora.first;
+            rezultatai << left << setw( 20 ) << pora.first;
 
-            for (int eilute : eilutes.at(pora.first))
+            for ( int eilute : eilutes.at( pora.first ) )
             {
                 rezultatai << eilute << " ";
             }
@@ -163,40 +177,41 @@ void isvestiCrossReference(const string& failoVardas, const map<string, int>& zo
     }
 }
 
-void isvestiUrlAdresus(const string& failoVardas, const vector<string>& urlAdresai)
+void isvestiUrlAdresus( const string& failoName, const vector<string>& urlAdresai )
 {
-    ofstream rezultatai(failoVardas);
+    ofstream rezultatai( failoName );
 
     rezultatai << "Rasti URL adresai:" << endl;
     rezultatai << "-----------------" << endl;
 
-    for (const string& url : urlAdresai)
+    for ( const string& url : urlAdresai )
     {
         rezultatai << url << endl;
     }
 }
 
-int main()
+int main( )
 {
     const string ivestiesFailas = "tekstas.txt";
+
     map<string, int> zodziuKiekiai;
     map<string, set<int>> eilutes;
     vector<string> urlAdresai;
 
-    ifstream tikrinimas(ivestiesFailas);
+    ifstream tikrinimas( ivestiesFailas );
 
-    if (!tikrinimas)
+    if ( !tikrinimas )
     {
         cout << "Nepavyko atidaryti failo: " << ivestiesFailas << endl;
         return 1;
     }
 
-    tikrinimas.close();
+    tikrinimas.close( );
 
-    nuskaitytiTeksta(ivestiesFailas, zodziuKiekiai, eilutes, urlAdresai);
-    isvestiZodziuKiekius("zodziu_pasikartojimai.txt", zodziuKiekiai);
-    isvestiCrossReference("cross_reference.txt", zodziuKiekiai, eilutes);
-    isvestiUrlAdresus("url_adresai.txt", urlAdresai);
+    nuskaitytiTeksta( ivestiesFailas, zodziuKiekiai, eilutes, urlAdresai );
+    isvestiZodziuKiekius( "zodziu_pasikartojimai.txt", zodziuKiekiai );
+    isvestiCrossReference( "cross_reference.txt", zodziuKiekiai, eilutes );
+    isvestiUrlAdresus( "url_adresai.txt", urlAdresai );
 
     cout << "Programa baige darba." << endl;
     cout << "Rezultatai irasyti i failus:" << endl;

@@ -1,192 +1,466 @@
 Zodis               Eilutes
 ------------------------------------------------------------
-a                   1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 
-about               1 
-address             7 15 
-addresses           3 7 13 15 25 27 29 31 
-adds                19 
-advanced            5 29 
-again               9 
-all                 7 13 31 
-already             5 13 
-also                1 9 15 21 25 
-an                  15 
-and                 1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 
-another             7 11 23 
-answer              27 
-answers             27 
-appear              7 25 
-appears             3 11 15 17 
-are                 3 5 9 13 23 27 31 
-as                  1 3 5 7 15 21 23 25 
-ask                 9 27 
-assignment          13 23 31 
-associative         3 9 29 
-be                  1 7 9 15 21 23 25 27 29 31 
-because             1 9 11 21 
-before              9 25 
-but                 3 9 13 23 25 29 
-by                  9 21 
-c                   3 21 
-can                 3 5 7 9 11 13 21 23 27 29 
-chosen              27 
-clean               11 13 
-cleaning            7 13 29 
-clear               5 29 
-code                1 9 13 19 21 23 25 
-compiler            21 
-contain             15 
-container           9 17 
-containers          3 5 9 29 
-could               7 9 
-count               15 27 
-counted             5 31 
-counter             3 9 17 
-counts              3 19 
-creates             3 9 19 
-cross               3 11 15 19 
-data                1 19 
-each                3 11 19 
-easier              11 13 17 
-engineering         1 
-enough              3 5 13 23 
-every               1 5 25 
-exercise            13 23 
-file                3 5 9 15 17 19 21 23 31 
-files               5 13 15 19 21 23 29 31 
-final               7 29 
-finds               3 29 
-first               5 19 29 
-for                 3 5 9 13 19 23 27 29 31 
-form                7 
-found               3 15 27 
-from                5 19 21 25 
-functions           5 13 
-goal                17 
-good                13 27 
-grouping            3 11 
-habit               1 23 
-have                9 13 
-help                1 3 25 
-helpful             11 25 
-how                 3 19 
-if                  9 11 13 15 21 31 
-important           7 17 21 
-in                  1 3 7 13 15 19 21 27 
-information         1 9 
-input               17 19 21 23 
-into                5 13 31 
-is                  1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 
-it                  1 5 11 13 15 17 19 21 25 29 
-its                 9 27 
-keep                9 23 
-keeps               11 27 
-know                5 
-large               23 29 
-larger              1 9 
-lecturer            27 
-library             5 
-line                3 5 11 15 21 25 27 29 31 
-long                3 13 
-make                17 21 
-many                1 5 9 17 
-map                 3 9 27 
-may                 5 9 25 27 
-mention             25 
-more                11 15 25 31 
-near                11 21 
-new                 9 
-not                 1 5 9 13 17 21 23 29 
-number              11 
-numbers             1 3 11 15 27 
-of                  1 5 7 11 15 17 25 29 
-often               7 19 27 
-on                  11 17 23 
-once                11 15 25 
-one                 11 13 
-only                1 11 15 25 31 
-or                  7 25 
-output              11 13 17 19 21 23 29 31 
-page                7 
-part                7 15 21 
-patterns            1 
-prepared            3 19 
-program             1 3 5 7 9 13 15 17 19 21 25 29 31 
-project             13 21 
-punctuation         5 15 25 
-read                9 11 
-reading             1 3 13 25 
-readme              19 23 
-reads               5 19 21 29 
-real                5 7 
-reference           3 11 15 19 
-references          29 31 
-repeated            11 15 17 29 31 
-repository          19 23 
-result              11 23 29 31 
-run                 15 19 21 
-same                1 5 11 15 
-sample              3 17 23 
-search              9 19 
-see                 11 17 
-set                 3 11 27 
-several             5 17 31 
-short               9 25 
-should              7 13 15 19 21 23 25 31 
-show                3 11 29 31 
-simple              3 13 19 27 
-small               1 9 13 23 29 
-smaller             1 5 
-sorted              27 
-source              21 23 
-standard            21 
-step                7 13 
-still               11 15 19 
-stores              3 11 
-student             1 3 11 13 15 17 29 
-studio              21 23 
-such                5 7 15 23 
-systems             1 
-table               3 11 
-task                1 3 15 25 
-testing             1 15 31 
-text                1 3 5 7 13 15 17 29 31 
-than                15 25 
-that                1 3 5 9 11 15 21 23 25 27 29 
-the                 1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 
-them                27 31 
-then                5 9 19 31 
-these               3 7 13 17 25 31 
-they                3 5 9 23 27 29 
-this                3 5 9 13 17 23 
-three               11 
-times               11 17 
-to                  1 3 5 9 11 13 17 19 21 23 29 31 
-too                 29 
-understandable      9 19 
-url                 15 19 27 31 
-used                9 11 
-useful              1 3 9 23 
-uses                19 21 25 29 
-vector              3 27 
-very                3 23 
-visual              21 23 
-was                 3 11 27 
-way                 1 23 
-web                 3 13 15 29 
-what                19 
-when                3 5 9 11 19 21 23 
-where               11 29 
-which               3 27 
-while               3 31 
-why                 27 
-with                1 3 5 21 27 
-without             7 15 29 
-word                3 5 9 11 15 17 27 
-words               3 5 13 15 17 19 25 29 31 
-work                1 3 5 19 
-write               5 17 
-writes              19 29 
-writing             1 13 
-written             7 11 15 25 
-year                5 29 
+01                  129 130 
+1                   95 324 325 
+10                  126 131 
+11                  53 69 
+11th                327 328 
+12                  68 94 
+13                  46 83 
+14                  53 221 
+1579                1 44 
+18                  59 70 217 
+1911                327 328 
+1939                49 
+1994                2 54 256 
+2                   72 87 216 
+20                  1 11 71 83 93 96 
+2011                122 319 
+2018                69 71 
+2019                67 68 
+2020                66 318 
+2025                96 99 
+21                  12 220 
+22                  44 96 
+23                  69 260 
+30                  35 36 
+32                  96 219 
+4                   34 99 
+40                  49 265 
+5                   16 88 95 
+a                   7 43 44 46 149 158 256 283 
+adomas              136 158 
+adomo               246 300 
+aikštė            106 111 113 115 147 152 154 176 178 
+aikštės           154 158 
+akademija           194 195 
+alyta               7 43 
+alytus              7 43 
+amžiaus            43 44 
+angl                326 327 328 
+ant                 163 184 
+antavilių          24 29 
+apaštalų          269 273 
+apie                7 43 44 49 265 337 
+apskrities          1 246 
+arba                68 184 
+archyvuota          346 351 357 
+arena               318 
+arkikatedra         149 278 
+armija              46 49 
+atodanga            16 
+atsirado            95 
+atsiveria           16 149 
+atstovybės         1 
+auga                29 73 
+augavietė          30 
+aukštosios         201 207 
+aukštumos          16 
+aukštutinė        142 149 
+aukščiausias      168 178 
+aukščiausių      29 340 
+autobusų           93 95 97 98 
+aušros             157 158 279 
+baltijos            11 16 65 178 283 
+baroko              154 
+based               327 328 
+baseinas            318 
+bažnyčia          154 158 267 268 269 270 271 272 273 274 275 276 277 287 
+bažnyčios         108 154 
+bei                 24 44 59 149 158 
+bendriniu           6 43 
+bendrinėje         6 43 
+bet                 46 59 149 
+biblioteka          44 245 246 247 248 
+bokštas            149 166 178 
+britannica          326 327 328 
+butų               68 
+buvo                46 47 48 49 70 71 
+bvp                 65 69 70 
+būna               36 37 
+c                   34 35 36 
+centras             1 47 65 225 227 228 229 233 234 235 240 241 306 308 
+centre              154 183 
+centrinė           16 247 
+centro              11 348 
+centru              44 
+centrų             158 178 
+cerkvė             158 283 
+d                   44 53 95 96 99 319 
+dailės             195 292 294 295 296 297 312 
+dalis               16 24 46 69 184 
+dar                 22 158 184 
+darbo               227 229 
+darbuotojų         225 233 
+daug                30 65 
+daugiau             68 69 265 287 
+daugiausia          16 29 
+didysis             44 
+didžiausias        93 318 
+didžiausių        178 283 
+dievo               267 283 287 
+dirbo               66 136 
+du                  59 69 
+dvasios             158 272 287 
+dėl                16 65 158 
+edition             326 327 328 
+ekonomika           52 63 
+encyclopedia        327 328 
+erdvė              149 154 158 
+eur                 69 71 
+europoje            44 158 
+europos             11 54 115 176 178 203 256 319 
+evangelikai         127 128 
+evangelikų         287 
+ežerai             24 
+ežeras             24 
+ežerų             24 59 
+fabrikas            52 
+forma               7 43 
+formos              7 43 
+galerija            293 294 
+gamyklos            52 
+gatves              94 96 
+gatvė              105 114 158 
+gedimino            44 144 149 196 
+geležinkelio       51 97 231 
+gimine              7 
+greitieji           93 95 
+greta               158 
+gubernijos          47 
+gyvenamieji         68 
+gyveno              136 
+gyventojai          118 184 
+gyventojui          65 69 70 71 
+gyventojų          46 49 
+iki                 44 47 96 318 
+intakas             16 22 
+interaktyvi         327 328 
+ir                  1 7 11 16 24 29 30 34 37 43 44 46 47 49 59 65 68 69 70 71 73 75 83 87 88 93 95 99 105 136 149 154 158 173 178 183 187 194 202 225 230 231 234 235 236 238 269 273 277 287 296 303 305 309 320 348 
+istorija            41 149 
+iš                 7 22 68 71 96 256 346 351 357 
+išlikusi           7 43 
+jas                 265 287 
+jeruzalės          24 227 
+jis                 51 65 
+jo                  149 183 184 
+jono                158 277 306 
+jos                 44 154 184 
+juozapo             184 204 
+jų                 49 68 158 
+kad                 7 158 
+kaip                7 37 43 44 47 59 149 
+kalboje             6 7 43 
+kalbos              7 43 
+kalno               144 163 184 
+kalnų              29 163 318 
+kalvynas            18 
+kapinės            171 283 
+karalius            44 
+karo                46 47 51 
+kartą              44 46 
+katalikai           124 263 
+katalikų           158 265 
+katedra             287 
+katedros            111 112 147 154 
+kazimiero           154 206 
+keletas             22 24 
+keliai              86 88 
+kitas               22 75 83 
+kiti                18 72 131 173 
+kitos               207 286 287 
+kitur               24 37 
+kitų               44 59 
+klimatas            33 34 
+km                  11 16 
+konstantinas        136 173 
+konstantino         107 214 
+kopija              346 351 357 
+koplyčia           158 279 
+kovo                44 53 96 
+krepšinio          319 320 
+kryžiai            149 163 
+kt                  24 29 30 287 
+kudirkos            113 183 
+kultūra            44 251 
+kultūros           44 54 136 
+kunigaikštis       44 
+kur                 24 29 
+kuri                7 43 154 
+kurie               53 149 
+kurioje             149 158 
+kurios              16 44 154 
+kyla                16 
+labai               22 44 
+laikotarpio         44 71 
+lazdynų            29 318 
+legenda             44 184 
+leidžiasi          16 
+lenkijos            44 
+liepa               30 
+liepos              95 99 
+lietuva             47 49 53 324 
+lietuvių           43 324 
+lietuvoje           11 37 44 59 94 154 178 260 
+lietuvos            1 7 29 43 44 48 49 51 65 70 72 149 154 168 184 194 292 298 309 
+lietuvą            49 51 
+link                16 158 
+lotynų             7 43 
+lygį               70 184 
+m                   1 2 7 17 38 44 46 47 48 49 51 53 54 66 67 68 69 71 93 94 95 96 99 122 144 149 154 168 173 178 256 283 318 319 357 
+machine             346 351 357 
+marijos             158 275 279 
+maršrutai          93 95 
+maršrutų          93 95 
+matomi              149 183 
+mašinų            52 
+menų               214 306 
+mergelės           158 275 279 
+metu                46 
+mickevičiaus       246 300 
+mickevičius        136 158 
+miestas             1 7 22 46 256 
+mieste              24 43 44 65 66 68 93 99 
+miesto              1 7 12 16 17 22 29 43 44 46 59 60 73 139 149 154 178 247 338 345 347 
+miestą             6 7 22 46 48 59 
+miestų             44 59 
+mikalojaus          214 274 
+mikalojus           136 173 
+miškai             12 29 
+miškas             29 
+miškų             29 
+mln                 67 68 
+mlrd                70 71 
+modelį             7 43 
+mokykla             205 214 220 226 230 231 232 236 237 238 239 
+mokyklos            188 201 207 212 216 218 219 
+mokymo              224 227 229 234 235 240 241 
+motinos             279 283 287 
+muziejus            292 295 296 297 298 300 302 303 304 305 307 309 310 312 314 
+muzikos             194 309 
+nacionalinis        292 298 
+nacionalinė        214 245 294 
+namai               68 299 
+namų               49 51 109 
+naujų              51 96 
+ne                  7 59 149 158 
+neries              11 16 17 22 99 149 168 178 
+nerį               22 83 
+nors                46 184 
+nuo                 1 7 11 38 43 44 47 51 53 99 144 149 154 158 184 283 
+o                   7 17 22 29 34 149 158 183 
+objektai            72 139 
+of                  239 327 
+on                  327 328 
+or                  326 328 
+oro                 38 97 339 
+padaryta            7 43 
+pagal               7 43 149 184 
+pakraštyje         24 25 
+pakraštys          16 29 
+pakraščiais       16 22 
+paminklas           161 163 256 
+pamėnkalnis        181 183 
+panerių            18 29 
+parkas              29 
+parke               30 163 
+parko               30 318 
+pasaulio            2 54 256 
+pasižymi           65 144 
+paslaugų           231 232 233 
+pastatai            12 178 
+pastatyta           52 283 
+pastatų            256 340 
+pat                 6 7 16 44 149 320 
+pats                7 44 
+patį               7 43 
+pavadinimas         43 184 
+paveldo             2 54 256 302 
+pavilnių           29 30 
+paviršius          15 16 17 
+per                 29 49 83 
+pilaitės           24 29 
+pilių              30 163 
+pirmieji            93 96 
+pirmą              44 46 
+plyti               16 25 
+po                  46 47 51 
+pradėjo            99 184 
+pradžioje          44 66 94 
+pramonė            52 
+prasidėjo          51 96 
+prie                16 24 108 158 168 
+priklauso           59 163 283 
+profesinio          224 233 234 
+projekto            346 351 357 
+psl                 324 325 326 
+pusę               29 
+ratas               30 
+regiono             44 51 70 
+rengimo             228 233 
+riešės            16 24 
+rinkos              227 229 
+rokantiškių       17 24 
+rotušės           106 152 154 158 
+rusijos             46 47 
+rytinė             16 24 
+rytų               7 22 37 43 
+rūmai              149 183 
+rūmų              29 295 
+santakoje           11 149 
+sapiegų            29 30 
+sausio              53 
+savivaldybė        57 59 
+savivaldybės       1 59 60 67 178 247 
+senamiestis         2 54 254 
+senamiesčio        348 349 
+seniausių          149 173 
+senoji              7 43 
+senojo              154 356 
+sentikiai           126 282 283 
+sentikių           283 
+siemens             318 319 
+sietinas            6 43 
+simonas             136 
+skveras             107 108 112 
+sostine             51 54 
+sostinė            1 47 48 
+sostinės           65 70 96 
+sovietai            48 51 53 
+sovietų            49 51 53 
+sparčiai           52 73 
+stadionas           318 
+stačiais           16 144 
+stačiatikių       158 287 
+stiliumi            154 287 
+stotis              97 
+su                  6 22 43 49 69 144 149 158 184 287 346 350 
+sudaro              12 16 
+sudarė             67 71 
+sukurta             44 70 154 
+svarbiausių        158 173 
+sąjungos           49 53 
+sąrašą           2 54 256 
+taip                6 7 16 44 65 149 320 
+tapo                44 49 51 54 154 
+tarmėse            7 43 
+tauro               183 184 
+tačiau             23 47 
+teatro              194 309 
+technikos           196 303 
+technologijų       234 235 238 
+teka                22 
+televizijos         53 166 
+telkšo             24 59 
+temperatūra        34 38 
+teresės            158 270 
+teritorijoje        22 51 59 
+the                 327 328 
+ties                16 23 
+tik                 23 149 158 184 
+tiltą              99 
+tiltų              83 
+tipo                96 99 
+to                  22 68 
+tokio               96 99 
+transportas         91 93 
+transporto          75 95 231 
+trijų              68 161 
+troleibusai         93 94 
+troleibusų         93 96 
+trys                149 158 163 
+turizmo             73 236 
+tvenkinys           24 
+tą                 7 43 
+tūkst              66 
+unesco              2 54 256 
+universitetas       44 48 193 196 198 202 203 206 
+universiteto        44 205 209 248 313 
+universitetą       44 47 
+uostas              97 339 
+upė                6 22 
+upės               7 16 36 43 44 
+upėvardis          6 43 
+už                 29 158 
+užsienio           1 65 71 
+užėmė            46 49 51 53 
+užėmę            48 
+vadinamas           184 256 
+vadinti             7 184 
+vakarų             44 70 
+valdžia            47 60 
+valdžios           1 65 
+vardas              7 43 
+vardo               7 43 
+variantas           6 43 
+vartų              158 279 
+vasarą             49 
+veikia              1 72 98 103 
+veikė              48 66 
+verkių             24 29 30 
+verslo              99 178 205 230 231 233 234 236 238 
+vidurio             70 158 
+vidutinė           34 
+viena               23 283 
+vienam              65 69 70 71 
+vienas              136 154 158 178 184 256 
+vienos              29 173 
+vienuolynas         158 
+vietos              30 158 184 
+viešasis           91 93 
+vilna               7 43 326 327 328 
+vilnelės           149 
+vilnia              6 7 16 22 43 
+vilniaus            1 2 7 25 29 43 44 46 47 48 49 51 52 54 59 60 67 69 73 93 96 97 114 144 149 154 158 163 178 183 188 193 195 196 197 204 205 209 215 227 228 229 230 231 232 233 234 235 236 238 246 247 248 278 283 287 293 310 312 313 339 340 341 345 346 347 348 349 350 351 355 356 
+vilnios             6 11 43 
+vilnis              6 43 94 
+vilniuje            29 37 48 51 52 53 96 154 178 300 
+vilnius             1 6 7 43 44 47 49 54 158 301 324 357 
+vilnių             44 46 48 49 51 53 59 149 337 
+vingio              23 29 30 318 
+viršijo            69 70 
+visa                47 49 149 
+viso                71 96 
+visoje              37 44 158 
+visų               188 268 
+vokiečių          49 105 
+vyko                53 319 
+vyrauja             29 
+vyriška            7 
+vystėsi            47 52 
+vėliau             44 48 
+wayback             346 351 357 
+wilno               7 326 328 
+xv                  7 43 
+xviii               46 149 
+yra                 1 6 7 11 16 17 18 23 24 29 30 34 43 65 83 93 97 149 154 158 168 178 183 184 256 260 265 287 318 
+Čia                158 173 178 
+Čiurlionis         136 173 
+čia                265 287 
+Įkurtos            52 173 
+į                  2 7 11 16 22 44 46 48 49 51 53 54 88 94 96 149 184 256 287 
+įmonės            66 93 
+įsigalėjo         7 43 
+įsigalėjęs       6 43 
+įstaigos           75 187 224 
+įtrauktas          2 54 256 
+Šiaurės           16 25 44 46 51 158 
+Šv                 154 158 204 269 270 271 273 274 276 277 287 
+Šventosios         44 272 
+Švč               158 267 275 279 283 
+šaltinis           66 67 68 
+šalyse             178 283 
+šiaurėje          16 24 
+šiaurės           16 24 29 
+šio                154 184 
+šios               149 158 
+šlaitais           16 144 
+šv                 108 154 
+Žalgirio           318 320 
+Žvėryno           30 99 
+žemėlapis         346 347 348 350 351 
+žinoma             7 43 
+žodžiu            6 43 
+žr                 265 287 
+žydų              44 49 158 287 310 
+Т                  325 326 
