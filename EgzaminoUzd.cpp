@@ -14,6 +14,11 @@
 
 using namespace std;
 
+const string IVESTIES_FAILAS = "tekstas.txt";
+const string ZODZIU_FAILAS = "zodziu_pasikartojimai.txt";
+const string CROSS_REFERENCE_FAILAS = "cross_reference.txt";
+const string URL_FAILAS = "url_adresai.txt";
+
 string mazosiomisRaides( string zodis )
 {
     for ( char& raide : zodis )
@@ -192,32 +197,30 @@ void isvestiUrlAdresus( const string& failoName, const vector<string>& urlAdresa
 
 int main( )
 {
-    const string ivestiesFailas = "tekstas.txt";
-
     map<string, int> zodziuKiekiai;
     map<string, set<int>> eilutes;
     vector<string> urlAdresai;
 
-    ifstream tikrinimas( ivestiesFailas );
+    ifstream tikrinimas( IVESTIES_FAILAS );
 
     if ( !tikrinimas )
     {
-        cout << "Nepavyko atidaryti failo: " << ivestiesFailas << endl;
+        cout << "Nepavyko atidaryti failo: " << IVESTIES_FAILAS << endl;
         return 1;
     }
 
     tikrinimas.close( );
 
-    nuskaitytiTeksta( ivestiesFailas, zodziuKiekiai, eilutes, urlAdresai );
-    isvestiZodziuKiekius( "zodziu_pasikartojimai.txt", zodziuKiekiai );
-    isvestiCrossReference( "cross_reference.txt", zodziuKiekiai, eilutes );
-    isvestiUrlAdresus( "url_adresai.txt", urlAdresai );
+    nuskaitytiTeksta( IVESTIES_FAILAS, zodziuKiekiai, eilutes, urlAdresai );
+    isvestiZodziuKiekius( ZODZIU_FAILAS, zodziuKiekiai );
+    isvestiCrossReference( CROSS_REFERENCE_FAILAS, zodziuKiekiai, eilutes );
+    isvestiUrlAdresus( URL_FAILAS, urlAdresai );
 
     cout << "Programa baige darba." << endl;
     cout << "Rezultatai irasyti i failus:" << endl;
-    cout << "zodziu_pasikartojimai.txt" << endl;
-    cout << "cross_reference.txt" << endl;
-    cout << "url_adresai.txt" << endl;
+    cout << ZODZIU_FAILAS << endl;
+    cout << CROSS_REFERENCE_FAILAS << endl;
+    cout << URL_FAILAS << endl;
 
     return 0;
 }
