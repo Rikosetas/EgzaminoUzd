@@ -66,7 +66,7 @@ bool arUrl( string tekstas )
 
     size_t paskutinisTaskas = tekstas.rfind( '.' );
     string galune = tekstas.substr( paskutinisTaskas + 1 );
-    set<string> galimosGalunes = { "lt", "com", "org", "net", "edu", "gov", "io", "dev", "eu", "info" };
+    const set<string> galimosGalunes = { "lt", "com", "org", "net", "edu", "gov", "io", "dev", "eu", "info" };
 
     if ( galune.length( ) < 2 || galune.length( ) > 6 )
     {
