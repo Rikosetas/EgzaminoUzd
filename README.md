@@ -35,6 +35,13 @@ g++ EgzaminoUzd.cpp -o EgzaminoUzd
 ./EgzaminoUzd
 ```
 
+Naudojant CMake:
+
+```bash
+cmake -S . -B build
+cmake --build build
+```
+
 Paleidus programa, `tekstas.txt` turi buti tame paciame kataloge, is kurio paleidziama programa.
 
 ## URL formatai
